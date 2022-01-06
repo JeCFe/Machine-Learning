@@ -143,7 +143,7 @@ def LiveGenderRecognistion():
     genderModel = 'deploy_gender.prototxt'
     genderProto = 'gender_net.caffemodel'
     modelMeanValues = (78.4263377603, 87.7689143744, 114.895847746)
-    genderList = ('Male', 'Female')
+    genderList = ('Female', 'Male')
     protoPath = "deploy.prototxt.txt"
     modelPath = "res10_300x300_ssd_iter_140000_fp16.caffemodel"
 
@@ -265,5 +265,6 @@ def menu():
         LiveAgeRecognistion()
 
 if __name__ == "__main__":
+
     while True:
         menu()

@@ -22,12 +22,16 @@ d = {'S': 0, 'C': 1, 'Q': 2}
 
 # Replacing each embarking string with relevant int
 # Using the mean value can result in a bias being formed
-df['Embarked'] = df['Embarked'].map(d)
-test_data['Embarked'] = test_data['Embarked'].map(d)
+#df['Embarked'] = df['Embarked'].map(d)
+#test_data['Embarked'] = test_data['Embarked'].map(d)
 
 # # Cleaning up missing embarking
-df['Embarked'].fillna(df['Embarked'].median(), inplace=True)
-test_data['Embarked'].fillna(test_data['Embarked'].median(), inplace=True)
+#df['Embarked'].fillna(df['Embarked'].median(), inplace=True)
+#test_data['Embarked'].fillna(test_data['Embarked'].median(), inplace=True)
+
+df = df.dropna()
+test_data = test_data.dropna()
+
 
 # Clearing up missing Fares
 # df['Fare'].fillna(df['Fare'].mean(), inplace=True)
